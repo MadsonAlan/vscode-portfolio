@@ -29,7 +29,7 @@ const RepoCard = ({ repo }) => {
             <GithubIcon height={20} width={20} className={styles.icon} />
           </a>
           {repo.homepage && (
-            <a href={repo.homepage} target="_blank" rel="noopener noreferrer">
+            <a href={`https://${repo.homepage?.replace('https://','')}`} target="_blank" rel="noopener noreferrer">
               <LinkIcon height={20} width={20} className={styles.icon} />
             </a>
           )}
