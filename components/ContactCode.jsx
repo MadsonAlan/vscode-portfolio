@@ -8,48 +8,23 @@ const contactItems = [
   },
   {
     social: 'email',
-    link: 'nitinranganath@gmail.com',
+    link: 'contato.madsonalan@gmail.com',
     href: 'mailto:nitinranganath@gmail.com',
   },
   {
     social: 'github',
-    link: 'itsnitinr',
-    href: 'https://github.com/itsnitinr',
+    link: 'MadsonAlan',
+    href: 'https://github.com/madsonAlan',
   },
   {
     social: 'linkedin',
     link: 'nitinranganath',
-    href: 'https://www.linkedin.com/in/nitinranganath/',
-  },
-  {
-    social: 'twitter',
-    link: 'iamnitinr',
-    href: 'https://www.twitter.com/iamnitinr',
+    href: 'https://www.linkedin.com/in/madson-alan-vitorino-sousa-550040158/',
   },
   {
     social: 'instagram',
     link: 'iamnitinr',
-    href: 'https://www.instagram.com/iamnitinr',
-  },
-  {
-    social: 'polywork',
-    link: 'nitinranganath',
-    href: 'https://www.polywork.com/nitinranganath',
-  },
-  {
-    social: 'telegram',
-    link: 'iamnitinr',
-    href: 'https://t.me/iamnitinr',
-  },
-  {
-    social: 'codepen',
-    link: 'nitinranganath',
-    href: 'https://codepen.io/itsnitinr',
-  },
-  {
-    social: 'codesandbox',
-    link: 'itsnitinr',
-    href: 'https://codesandbox.io/u/itsnitinr',
+    href: 'https://www.instagram.com/madson.alan',
   },
 ];
 

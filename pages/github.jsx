@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import GitHubCalendar from 'react-github-calendar';
-import RepoCard from '../RepoCard';
+import RepoCard from '../components/RepoCard';
 import styles from '../styles/GithubPage.module.css';
 
 const GithubPage = ({ repos, user }) => {
@@ -71,7 +71,7 @@ export async function getStaticProps() {
   let repos = await repoRes.json();
   repos = repos
     .sort((a, b) => b.stargazers_count - a.stargazers_count)
-    .slice(0, 6);
+    // .slice(0, 9);
 
   return {
     props: { title: 'GitHub', repos, user },
