@@ -2,11 +2,6 @@ import styles from '../styles/ContactCode.module.css';
 
 const contactItems = [
   {
-    social: 'website',
-    link: 'nitinranganath.me',
-    href: 'https://nitinranganath.me',
-  },
-  {
     social: 'email',
     link: 'contato.madsonalan@gmail.com',
     href: 'mailto:nitinranganath@gmail.com',
