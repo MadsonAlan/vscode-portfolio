@@ -1,6 +1,7 @@
 import ProjectCard from '../components/ProjectCard';
 import styles from '../styles/ProjectsPage.module.css';
-import puppeteer from 'puppeteer';
+import chrome from 'chrome-aws-lambda'
+import puppeteer from 'puppeteer-core';
 
 const ProjectsPage = ({ projects }) => {
   return (
@@ -42,7 +43,37 @@ export async function getStaticProps() {
       }
     );
 
-    const browser = await puppeteer.launch();
+    const isDev = !process.env.AWS_REGION
+
+    const chromeExecPaths = {
+      // win32: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+      win32: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+      linux: '/usr/bin/google-chrome',
+      // linux: '/usr/bin/chromium-browser',
+      darwin: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+    }
+
+    let options;
+
+
+  if (isDev) {
+    options = {
+      args: [],
+      executablePath: exePath,
+      headless: true,
+      ignoreDefaultArgs: ['--disable-extensions']
+    }
+  } else {
+    options = {
+      args: chrome.args,
+      executablePath: await chrome.executablePath,
+      headless: chrome.headless,
+      ignoreDefaultArgs: ['--disable-extensions']
+    }
+  }
+
+    const exePath = chromeExecPaths[process.platform]
+    const browser = await puppeteer.launch(options)
     const page = await browser.newPage();
     await page.goto(`https://${item.homepage?.replace('https://','')}`, { waitUntil: 'networkidle2' });
     await page.screenshot({path: `./public/${item.name}.png`})
