@@ -13,12 +13,12 @@ const contactItems = [
   },
   {
     social: 'linkedin',
-    link: 'nitinranganath',
+    link: 'Madson Alan',
     href: 'https://www.linkedin.com/in/madson-alan-vitorino-sousa-550040158/',
   },
   {
     social: 'instagram',
-    link: 'iamnitinr',
+    link: 'madson.alan',
     href: 'https://www.instagram.com/madson.alan',
   },
 ];
