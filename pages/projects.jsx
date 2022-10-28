@@ -44,7 +44,7 @@ export async function getStaticProps() {
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto(`https://${item.homepage?.replace('https://','')}`);
+    await page.goto(`https://${item.homepage?.replace('https://','')}`, { waitUntil: 'networkidle2' });
     await page.screenshot({path: `./public/${item.name}.png`})
     await page.close()
 
