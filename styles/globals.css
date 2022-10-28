@@ -16,10 +16,17 @@
   background: rgba(97, 218, 251, 0.25);
 }
 
-.node {
+.JavaScript {
+  border: 0.1rem solid rgb(239, 216, 29);
+}
+.JavaScript:hover {
+  background: rgba(239, 216, 29, 0.25);
+}
+
+.Shell {
   border: 0.1rem solid rgb(131, 205, 41);
 }
-.node:hover {
+.Shell:hover {
   background: rgba(131, 205, 41, 0.25);
 }
 
@@ -58,10 +65,10 @@
   background: rgb(0, 209, 178, 0.25);
 }
 
-.next {
+.TypeScript {
   border: 2px solid rgb(0, 112, 243);
 }
-.next:hover {
+.TypeScript:hover {
   background: rgba(0, 112, 243, 0.25);
 }
 
@@ -72,16 +79,23 @@
   background: rgba(6, 182, 212, 0.25);
 }
 
-.react-query {
+.HTML {
   border: 2px solid rgb(255, 65, 84);
 }
-.react-query:hover {
+.HTML:hover {
   background: rgba(255, 65, 84, 0.25);
 }
 
-.css-modules {
+.SCSS {
+  border: 2px solid rgb(207, 100, 154);
+}
+.SCSS:hover {
+  background: rgba(207, 100, 154, 0.25);
+}
+
+.CSS {
   border: 2px solid rgb(21, 114, 182);
 }
-.css-modules:hover {
+.CSS:hover {
   background: rgba(21, 114, 182, 0.25);
 }

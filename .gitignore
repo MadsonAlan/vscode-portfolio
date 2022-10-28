@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-CODE_OF_CONDUCTI.md
+CODE_OF_CONDUCTI.md*
 # testing
 /coverage
 .env

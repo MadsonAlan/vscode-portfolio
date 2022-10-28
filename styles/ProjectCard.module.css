@@ -60,3 +60,7 @@
 .underline:hover {
   background-size: 100% 88%;
 }
+
+.imageCard {
+  border-radius: 10px;
+}
