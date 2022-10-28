@@ -1,7 +1,5 @@
 import ProjectCard from '../components/ProjectCard';
 import styles from '../styles/ProjectsPage.module.css';
-import chrome from 'chrome-aws-lambda'
-import puppeteer from 'puppeteer-core';
 
 const ProjectsPage = ({ projects }) => {
   return (
