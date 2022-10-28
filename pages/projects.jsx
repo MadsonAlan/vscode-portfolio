@@ -53,6 +53,8 @@ export async function getStaticProps() {
       darwin: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
     }
 
+    const exePath = chromeExecPaths[process.platform]
+
     let options;
 
 
@@ -72,7 +74,7 @@ export async function getStaticProps() {
     }
   }
 
-    const exePath = chromeExecPaths[process.platform]
+    
     const browser = await puppeteer.launch(options)
     const page = await browser.newPage();
     await page.goto(`https://${item.homepage?.replace('https://','')}`, { waitUntil: 'networkidle2' });
