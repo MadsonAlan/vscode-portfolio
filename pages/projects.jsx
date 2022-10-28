@@ -48,8 +48,8 @@ export async function getStaticProps() {
     const chromeExecPaths = {
       // win32: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
       win32: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-      linux: '/usr/bin/google-chrome',
-      // linux: '/usr/bin/chromium-browser',
+      // linux: '/usr/bin/google-chrome',
+      linux: '/usr/bin/chromium-browser',
       darwin: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
     }
 
