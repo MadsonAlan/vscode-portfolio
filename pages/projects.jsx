@@ -45,7 +45,8 @@ export async function getStaticProps() {
     
     const browser = await puppeteer.launch({
       executablePath: '/usr/bin/chromium-browser',
-      args: ["--no-sandbox"]
+      headless: true,
+      args: ["--no-sandbox", '--use-gl=egl']
     })
     const page = await browser.newPage();
     await page.goto(`https://${item.homepage?.replace('https://','')}`, { waitUntil: 'networkidle2' });
