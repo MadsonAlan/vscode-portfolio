@@ -5,7 +5,7 @@ import { Layout } from "../components/Layout";
 import "../styles/globals.css";
 import "../styles/themes.css";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     if (localStorage.getItem("theme")) {
