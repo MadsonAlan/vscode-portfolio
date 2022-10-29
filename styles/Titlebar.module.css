@@ -33,16 +33,23 @@
   display: flex;
   align-items: center;
   margin-left: auto;
+  justify-content: flex-end;
 }
 
 .windowButtons * {
-  margin-left: 0.5rem;
-  height: 13px;
-  width: 13px;
+  margin-left: 2rem;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   cursor: pointer;
 }
 
+.windowsButtonMinimize {
+  margin-left: auto;
+}
+.windowsButtonClose {
+  margin-right: 0.5rem;
+}
 .minimize {
   background: #f1fa8c;
   margin-left: auto;

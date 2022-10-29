@@ -11,7 +11,7 @@ interface explorerItems{
 }
 const explorerItems:explorerItems[] = [
   {
-    name: 'home.jsx',
+    name: 'home.tsx',
     path: '/',
     icon: 'react_icon.svg',
   },
@@ -26,9 +26,9 @@ const explorerItems:explorerItems[] = [
     icon: 'css_icon.svg',
   },
   {
-    name: 'projects.js',
+    name: 'projects.ts',
     path: '/projects',
-    icon: 'js_icon.svg',
+    icon: 'typescript.svg',
   },
   {
     name: 'github.md',
