@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from 'next';
-import {ArticleCard} from '../ArticleCard';
+import ArticleCard from '../ArticleCard';
 import styles from '../styles/ArticlesPage.module.css';
 export interface Article{
   id: string
