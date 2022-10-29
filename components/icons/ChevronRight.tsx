@@ -1,4 +1,4 @@
-const ChevronRight = (props) => {
+export const ChevronRight = (props:any) => {
   return (
     <svg
       width={16}
@@ -17,4 +17,3 @@ const ChevronRight = (props) => {
   );
 };
 
-export default ChevronRight;

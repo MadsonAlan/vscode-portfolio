@@ -1,4 +1,4 @@
-const SourceControlIcon = (props) => {
+export const SourceControlIcon = (props:any) => {
   return (
     <svg
       width={14}
@@ -11,5 +11,3 @@ const SourceControlIcon = (props) => {
     </svg>
   );
 };
-
-export default SourceControlIcon;

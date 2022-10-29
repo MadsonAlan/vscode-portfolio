@@ -1,4 +1,4 @@
-const WarningIcon = (props) => {
+export const WarningIcon = (props:any) => {
   return (
     <svg
       width={14}
@@ -16,5 +16,3 @@ const WarningIcon = (props) => {
     </svg>
   );
 };
-
-export default WarningIcon;

@@ -1,4 +1,4 @@
-const CodeIcon = (props) => {
+export const CodeIcon = (props:any) => {
   return (
     <svg
       width={16}
@@ -12,5 +12,3 @@ const CodeIcon = (props) => {
     </svg>
   );
 };
-
-export default CodeIcon;

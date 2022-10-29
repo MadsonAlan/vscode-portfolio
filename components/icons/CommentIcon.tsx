@@ -1,4 +1,4 @@
-const CommentIcon = (props) => {
+export const CommentIcon = (props: any) => {
   return (
     <svg
       fill="currentColor"
@@ -14,4 +14,3 @@ const CommentIcon = (props) => {
   );
 };
 
-export default CommentIcon;

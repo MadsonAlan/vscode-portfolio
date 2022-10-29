@@ -1,4 +1,4 @@
-const EyeIcon = (props) => {
+export const EyeIcon = (props:any) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" {...props}>
       <g fill="currentColor">
@@ -8,5 +8,3 @@ const EyeIcon = (props) => {
     </svg>
   );
 };
-
-export default EyeIcon;

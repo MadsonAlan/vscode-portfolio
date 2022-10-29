@@ -4,7 +4,7 @@ import styles from '../styles/ProjectCard.module.css';
 interface ProjectCardProps{
   project: GithubRepositoryesWithURLPage
 }
-const ProjectCard = ({ project }:ProjectCardProps) => {
+export const ProjectCard = ({ project }:ProjectCardProps) => {
   return (
     <div className={styles.card}>
       {project.name?<Image src={`/${project.name}.png`} height={200} width={300} className={styles.imageCard} alt={project.name} />:<></>}
@@ -43,4 +43,3 @@ const ProjectCard = ({ project }:ProjectCardProps) => {
   );
 };
 
-export default ProjectCard;

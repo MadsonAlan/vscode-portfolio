@@ -1,5 +1,6 @@
-import { GetStaticProps, NextPage } from 'next';
-import ThemeInfo from '../components/ThemeInfo';
+
+import { NextPage, GetStaticProps } from 'next';
+import { ThemeInfo } from '../components/ThemeInfo';
 import styles from '../styles/SettingsPage.module.css';
 
 const SettingsPage:NextPage = () => {

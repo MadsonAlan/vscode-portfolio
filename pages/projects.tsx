@@ -1,5 +1,6 @@
-import { GetStaticProps, NextPage } from 'next';
-import ProjectCard from '../components/ProjectCard';
+
+import { NextPage, GetStaticProps } from 'next';
+import { ProjectCard } from '../components/ProjectCard';
 import styles from '../styles/ProjectsPage.module.css';
 import { GithubRepos } from './github';
 // import puppeteer from 'puppeteer';

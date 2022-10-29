@@ -1,4 +1,4 @@
-const CheckIcon = (props) => {
+export const CheckIcon = (props:any) => {
   return (
     <svg
       width={16}
@@ -20,5 +20,3 @@ const CheckIcon = (props) => {
     </svg>
   );
 };
-
-export default CheckIcon;

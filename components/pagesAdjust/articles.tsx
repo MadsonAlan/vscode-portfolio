@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from 'next';
-import ArticleCard from '../ArticleCard';
+import {ArticleCard} from '../ArticleCard';
 import styles from '../styles/ArticlesPage.module.css';
 export interface Article{
   id: string
@@ -14,7 +14,7 @@ export interface Article{
 interface ArticlesPageProps{
   articles: Article[]
 }
-const ArticlesPage:NextPage<ArticlesPageProps> = ({ articles }) => {
+export const ArticlesPage = ({ articles }:ArticlesPageProps) => {
   return (
     <>
       <h3>
@@ -42,7 +42,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     'https://dev.to/api/articles/me/published?per_page=6',
     {
       headers: {
-        'api-key': process.env.DEV_TO_API_KEY,
+        'api-key': process.env.DEV_TO_API_KEY as string,
       },
     }
   );
@@ -54,5 +54,3 @@ export const getStaticProps: GetStaticProps = async (context) => {
     revalidate: 60,
   };
 }
-
-export default ArticlesPage;

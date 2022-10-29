@@ -1,4 +1,4 @@
-const ForkIcon = (props) => {
+export const ForkIcon = (props:any) => {
   return (
     <svg
       aria-hidden="true"
@@ -16,5 +16,3 @@ const ForkIcon = (props) => {
     </svg>
   );
 };
-
-export default ForkIcon;

@@ -1,4 +1,4 @@
-import { GetStaticProps, NextPage } from 'next';
+import { NextPage, GetStaticProps } from 'next';
 import { useState } from 'react';
 import ContactCode from '../components/ContactCode';
 import styles from '../styles/ContactPage.module.css';
@@ -9,7 +9,7 @@ const ContactPage:NextPage = () => {
   const [subject, setSubject] = useState<string>('');
   const [message, setMessage] = useState<string>('');
 
-  const submitForm = async (e) => {
+  const submitForm = async (e:any) => {
     e.preventDefault();
     console.log(process.env.NEXT_PUBLIC_API_URL);
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact`, {

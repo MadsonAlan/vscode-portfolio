@@ -1,4 +1,4 @@
-const WatchIcon = (props) => {
+export const WatchIcon = (props:any) => {
   return (
     <svg
       aria-hidden="true"
@@ -16,5 +16,3 @@ const WatchIcon = (props) => {
     </svg>
   );
 };
-
-export default WatchIcon;

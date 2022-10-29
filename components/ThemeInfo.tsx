@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import Image from 'next/image';
 import styles from '../styles/ThemeInfo.module.css';
 
@@ -9,8 +8,8 @@ interface ThemeInfoProps {
   theme:string,
   description:string
 }
-const ThemeInfo = ({ icon, name, publisher, theme, description }:ThemeInfoProps) => {
-  const setTheme = (theme) => {
+export const ThemeInfo = ({ icon, name, publisher, theme, description }:ThemeInfoProps) => {
+  const setTheme = (theme:string) => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   };
@@ -29,4 +28,3 @@ const ThemeInfo = ({ icon, name, publisher, theme, description }:ThemeInfoProps)
   );
 };
 
-export default ThemeInfo;

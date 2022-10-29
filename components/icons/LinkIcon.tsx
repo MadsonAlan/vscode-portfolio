@@ -1,4 +1,4 @@
-const LinkIcon = (props) => {
+export const LinkIcon = (props:any) => {
   return (
     <svg
       aria-hidden="true"
@@ -16,5 +16,3 @@ const LinkIcon = (props) => {
     </svg>
   );
 };
-
-export default LinkIcon;

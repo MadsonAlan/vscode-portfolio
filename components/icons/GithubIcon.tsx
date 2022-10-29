@@ -1,4 +1,4 @@
-const GithubIcon = (props) => {
+export const GithubIcon = (props:any) => {
   return (
     <svg
       width={24}
@@ -12,5 +12,3 @@ const GithubIcon = (props) => {
     </svg>
   );
 };
-
-export default GithubIcon;

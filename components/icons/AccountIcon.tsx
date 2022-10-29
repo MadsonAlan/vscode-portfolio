@@ -1,4 +1,4 @@
-const AccountIcon = (props) => {
+export const AccountIcon = (props:any) => {
   return (
     <svg
       width={16}
@@ -13,4 +13,3 @@ const AccountIcon = (props) => {
   );
 };
 
-export default AccountIcon;

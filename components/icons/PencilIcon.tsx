@@ -1,4 +1,4 @@
-const PencilIcon = (props) => {
+export const PencilIcon = (props:any) => {
   return (
     <svg
       width={16}
@@ -12,5 +12,3 @@ const PencilIcon = (props) => {
     </svg>
   );
 };
-
-export default PencilIcon;

@@ -1,4 +1,4 @@
-const BellIcon = (props) => {
+export const BellIcon = (props:any) => {
   return (
     <svg
       width={14}
@@ -13,4 +13,3 @@ const BellIcon = (props) => {
   );
 };
 
-export default BellIcon;

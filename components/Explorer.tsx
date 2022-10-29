@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import ChevronRight from '../components/icons/ChevronRight';
 import styles from '../styles/Explorer.module.css';
+import { ChevronRight } from './icons/ChevronRight';
 
 interface explorerItems{
   name: string,
@@ -37,7 +37,7 @@ const explorerItems:explorerItems[] = [
   },
 ];
 
-const Explorer = () => {
+export function Explorer(){
   const [portfolioOpen, setPortfolioOpen] = useState<boolean>(true);
 
   return (
@@ -81,4 +81,3 @@ const Explorer = () => {
   );
 };
 
-export default Explorer;

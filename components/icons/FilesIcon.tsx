@@ -1,4 +1,4 @@
-const FilesIcon = (props) => {
+export const FilesIcon = (props:any) => {
   return (
     <svg
       width={24}
@@ -13,4 +13,3 @@ const FilesIcon = (props) => {
   );
 };
 
-export default FilesIcon;

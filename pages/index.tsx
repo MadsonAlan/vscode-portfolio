@@ -1,6 +1,7 @@
-import { GetStaticProps, NextPage } from 'next';
+
+import { NextPage, GetStaticProps } from 'next';
 import Link from 'next/link';
-import Illustration from '../components/Illustration';
+import { Illustration } from '../components/Illustration';
 import styles from '../styles/HomePage.module.css';
 
 const HomePage:NextPage = () => {

@@ -1,4 +1,4 @@
-const HeartIcon = (props) => {
+export const HeartIcon = (props:any) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,5 +10,3 @@ const HeartIcon = (props) => {
     </svg>
   );
 };
-
-export default HeartIcon;

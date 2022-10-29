@@ -1,19 +1,16 @@
-import WatchIcon from '../components/icons/WatchIcon';
-import ForkIcon from '../components/icons/ForkIcon';
-import StarIcon from '../components/icons/StarIcon';
-import GithubIcon from '../components/icons/GithubIcon';
-import LinkIcon from '../components/icons/LinkIcon';
+
 import styles from '../styles/RepoCard.module.css';
 import { GithubRepos } from '../pages/github';
-interface RepoProps extends GithubRepos{
-  watchers: number,
-  forks: number,
-  html_url:string
-}
+import { ForkIcon } from './icons/ForkIcon';
+import { GithubIcon } from './icons/GithubIcon';
+import { LinkIcon } from './icons/LinkIcon';
+import { StarIcon } from './icons/StarIcon';
+import { WatchIcon } from './icons/WatchIcon';
+
 interface RepoCardProps{
-  repo: RepoProps
+  repo: GithubRepos
 }
-const RepoCard = ({ repo }:RepoCardProps) => {
+export const RepoCard = ({ repo }:RepoCardProps) => {
   return (
     <div className={styles.card}>
       <div>
@@ -47,4 +44,3 @@ const RepoCard = ({ repo }:RepoCardProps) => {
   );
 };
 
-export default RepoCard;

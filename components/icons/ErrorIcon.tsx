@@ -1,4 +1,4 @@
-const ErrorIcon = (props) => {
+export const ErrorIcon = (props:any) => {
   return (
     <svg
       width={14}
@@ -16,5 +16,3 @@ const ErrorIcon = (props) => {
     </svg>
   );
 };
-
-export default ErrorIcon;

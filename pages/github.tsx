@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from 'next';
 import Image from 'next/image';
 import GitHubCalendar from 'react-github-calendar';
-import RepoCard from '../components/RepoCard';
+import {RepoCard} from '../components/RepoCard';
 import styles from '../styles/GithubPage.module.css';
 
 interface GithubUser{
@@ -18,6 +18,9 @@ export interface GithubRepos{
   stargazers_count: number
   homepage: string | null
   languages_url: string
+  watchers: number
+  forks: number
+  html_url:string
 }
 
 interface GithubPageProps {

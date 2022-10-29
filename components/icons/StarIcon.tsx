@@ -1,4 +1,4 @@
-const StarIcon = (props) => {
+export const StarIcon = (props:any) => {
   return (
     <svg
       aria-hidden="true"
@@ -16,5 +16,3 @@ const StarIcon = (props) => {
     </svg>
   );
 };
-
-export default StarIcon;

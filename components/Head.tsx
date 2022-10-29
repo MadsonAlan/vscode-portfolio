@@ -3,7 +3,7 @@ import Head from 'next/head';
 interface CustomHeadProps{
   title: string
 }
-const CustomHead = ({ title }:CustomHeadProps) => {
+export function CustomHead ({ title }:CustomHeadProps){
   return (
     <Head>
       <title>{title}</title>
@@ -23,8 +23,6 @@ const CustomHead = ({ title }:CustomHeadProps) => {
     </Head>
   );
 };
-
-export default CustomHead;
 
 CustomHead.defaultProps = {
   title: 'Madson Alan',

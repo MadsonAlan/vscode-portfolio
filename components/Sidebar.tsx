@@ -1,15 +1,14 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import FilesIcon from './icons/FilesIcon';
-import GithubIcon from './icons/GithubIcon';
-import CodeIcon from './icons/CodeIcon';
-import PencilIcon from './icons/PencilIcon';
-import MailIcon from './icons/MailIcon';
-import AccountIcon from './icons/AccountIcon';
-import SettingsIcon from './icons/SettingsIcon';
 import styles from '../styles/Sidebar.module.css';
+import { AccountIcon } from './icons/AccountIcon';
+import { CodeIcon } from './icons/CodeIcon';
+import { FilesIcon } from './icons/FilesIcon';
+import { GithubIcon } from './icons/GithubIcon';
+import { MailIcon } from './icons/MailIcon';
+import { SettingsIcon } from './icons/SettingsIcon';
 interface GetIconInterface {
-  Icon: (fill) => JSX.Element,
+  Icon: (fill:any) => JSX.Element,
   path: string
 }
 const sidebarTopItems:GetIconInterface[] = [
@@ -42,7 +41,7 @@ const sidebarBottomItems:GetIconInterface[] = [
   },
 ];
 
-const Sidebar = () => {
+export const Sidebar = () => {
   const router = useRouter();
 
   return (
@@ -87,4 +86,3 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;

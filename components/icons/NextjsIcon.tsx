@@ -1,4 +1,4 @@
-const NextjsIcon = (props) => {
+export const NextjsIcon = (props:any) => {
   return (
     <svg
       width={14}
@@ -11,5 +11,3 @@ const NextjsIcon = (props) => {
     </svg>
   );
 };
-
-export default NextjsIcon;

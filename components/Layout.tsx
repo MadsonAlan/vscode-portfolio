@@ -1,15 +1,15 @@
-import Titlebar from '../components/Titlebar';
-import Sidebar from '../components/Sidebar';
-import Explorer from '../components/Explorer';
-import Bottombar from '../components/Bottombar';
-import Tabsbar from './Tabsbar';
+import {Titlebar} from '../components/Titlebar';
+import {Sidebar} from '../components/Sidebar';
+import {Tabsbar} from './Tabsbar';
 import styles from '../styles/Layout.module.css';
 import { ReactNode } from 'react';
+import { Bottombar } from './Bottombar';
+import { Explorer } from './Explorer';
 
 interface LayoutProps{
   children: ReactNode
 }
-const Layout = ({ children }:LayoutProps) => {
+export function Layout ({ children }:LayoutProps) {
   return (
     <>
       <Titlebar />
@@ -26,4 +26,3 @@ const Layout = ({ children }:LayoutProps) => {
   );
 };
 
-export default Layout;
