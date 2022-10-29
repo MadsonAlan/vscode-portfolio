@@ -1,12 +1,13 @@
+import { GetStaticProps, NextPage } from 'next';
 import { useState } from 'react';
 import ContactCode from '../components/ContactCode';
 import styles from '../styles/ContactPage.module.css';
 
-const ContactPage = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+const ContactPage:NextPage = () => {
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [subject, setSubject] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
 
   const submitForm = async (e) => {
     e.preventDefault();
@@ -88,7 +89,7 @@ const ContactPage = () => {
   );
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: { title: 'Contact' },
   };

@@ -1,9 +1,30 @@
+import { GetStaticProps, NextPage } from 'next';
 import Image from 'next/image';
 import GitHubCalendar from 'react-github-calendar';
 import RepoCard from '../components/RepoCard';
 import styles from '../styles/GithubPage.module.css';
 
-const GithubPage = ({ repos, user }) => {
+interface GithubUser{
+  avatar_url: string,
+  login: string,
+  public_repos: number,
+  followers: number
+}
+export interface GithubRepos{
+  id: string
+  name:string
+  description:string
+  url:string
+  stargazers_count: number
+  homepage: string | null
+  languages_url: string
+}
+
+interface GithubPageProps {
+  user: GithubUser,
+  repos: GithubRepos []
+}
+const GithubPage:NextPage<GithubPageProps> = ({ repos, user }) => {
   const theme = {
     level0: '#161B22',
     level1: '#0e4429',
@@ -50,7 +71,7 @@ const GithubPage = ({ repos, user }) => {
   );
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async (context) => {
   const userRes = await fetch(
     `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`,
     {
@@ -59,7 +80,7 @@ export async function getStaticProps() {
       },
     }
   );
-  const user = await userRes.json();
+  const user:GithubUser = await userRes.json();
 
   const repoRes = await fetch(
     `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?per_page=100`,
@@ -69,7 +90,7 @@ export async function getStaticProps() {
       },
     }
   );
-  let repos = await repoRes.json();
+  let repos:GithubRepos[] = await repoRes.json();
   repos = repos
     .sort((a, b) => b.stargazers_count - a.stargazers_count)
     // .slice(0, 9);

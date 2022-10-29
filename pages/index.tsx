@@ -1,8 +1,9 @@
+import { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
 import Illustration from '../components/Illustration';
 import styles from '../styles/HomePage.module.css';
 
-export default function HomePage() {
+const HomePage:NextPage = () => {
   return (
     <>
       <div className={styles.container}>
@@ -28,8 +29,10 @@ export default function HomePage() {
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: { title: 'Home' },
   };
 }
+
+export default HomePage

@@ -3,8 +3,9 @@ import Layout from "../components/Layout";
 import Head from "../components/Head";
 import "../styles/globals.css";
 import "../styles/themes.css";
+import type { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     if (localStorage.getItem("theme")) {

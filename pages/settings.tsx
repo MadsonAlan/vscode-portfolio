@@ -1,7 +1,8 @@
+import { GetStaticProps, NextPage } from 'next';
 import ThemeInfo from '../components/ThemeInfo';
 import styles from '../styles/SettingsPage.module.css';
 
-const SettingsPage = () => {
+const SettingsPage:NextPage = () => {
   return (
     <>
       <h2>Manage Themes</h2>
@@ -53,7 +54,7 @@ const SettingsPage = () => {
   );
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: { title: 'Settings' },
   };
