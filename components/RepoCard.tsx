@@ -4,8 +4,16 @@ import StarIcon from '../components/icons/StarIcon';
 import GithubIcon from '../components/icons/GithubIcon';
 import LinkIcon from '../components/icons/LinkIcon';
 import styles from '../styles/RepoCard.module.css';
-
-const RepoCard = ({ repo }) => {
+import { GithubRepos } from '../pages/github';
+interface RepoProps extends GithubRepos{
+  watchers: number,
+  forks: number,
+  html_url:string
+}
+interface RepoCardProps{
+  repo: RepoProps
+}
+const RepoCard = ({ repo }:RepoCardProps) => {
   return (
     <div className={styles.card}>
       <div>

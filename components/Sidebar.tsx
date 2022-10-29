@@ -8,8 +8,11 @@ import MailIcon from './icons/MailIcon';
 import AccountIcon from './icons/AccountIcon';
 import SettingsIcon from './icons/SettingsIcon';
 import styles from '../styles/Sidebar.module.css';
-
-const sidebarTopItems = [
+interface GetIconInterface {
+  Icon: (fill) => JSX.Element,
+  path: string
+}
+const sidebarTopItems:GetIconInterface[] = [
   {
     Icon: FilesIcon,
     path: '/',
@@ -28,7 +31,7 @@ const sidebarTopItems = [
   },
 ];
 
-const sidebarBottomItems = [
+const sidebarBottomItems:GetIconInterface[] = [
   {
     Icon: AccountIcon,
     path: '/about',
@@ -65,8 +68,8 @@ const Sidebar = () => {
         ))}
       </div>
       <div className={styles.sidebarBottom}>
-        {sidebarBottomItems.map(({ Icon, path }) => (
-          <div className={styles.iconContainer}>
+        {sidebarBottomItems.map(({ Icon, path }, index) => (
+          <div key={index+path} className={styles.iconContainer}>
             <Link href={path} key={path}>
               <Icon
                 fill={

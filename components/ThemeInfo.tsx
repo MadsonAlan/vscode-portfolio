@@ -1,7 +1,15 @@
+import { NextPage } from 'next';
 import Image from 'next/image';
 import styles from '../styles/ThemeInfo.module.css';
 
-const ThemeInfo = ({ icon, name, publisher, theme, description }) => {
+interface ThemeInfoProps {
+  icon:string,
+  name:string,
+  publisher:string,
+  theme:string,
+  description:string
+}
+const ThemeInfo = ({ icon, name, publisher, theme, description }:ThemeInfoProps) => {
   const setTheme = (theme) => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);

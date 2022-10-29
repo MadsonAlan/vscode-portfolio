@@ -1,6 +1,9 @@
 import Head from 'next/head';
 
-const CustomHead = ({ title }) => {
+interface CustomHeadProps{
+  title: string
+}
+const CustomHead = ({ title }:CustomHeadProps) => {
   return (
     <Head>
       <title>{title}</title>

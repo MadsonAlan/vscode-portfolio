@@ -1,7 +1,10 @@
 import Image from 'next/image';
+import { GithubRepositoryesWithURLPage } from '../pages/projects';
 import styles from '../styles/ProjectCard.module.css';
-
-const ProjectCard = ({ project }) => {
+interface ProjectCardProps{
+  project: GithubRepositoryesWithURLPage
+}
+const ProjectCard = ({ project }:ProjectCardProps) => {
   return (
     <div className={styles.card}>
       {project.name?<Image src={`/${project.name}.png`} height={200} width={300} className={styles.imageCard} alt={project.name} />:<></>}

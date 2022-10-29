@@ -4,8 +4,12 @@ import Explorer from '../components/Explorer';
 import Bottombar from '../components/Bottombar';
 import Tabsbar from './Tabsbar';
 import styles from '../styles/Layout.module.css';
+import { ReactNode } from 'react';
 
-const Layout = ({ children }) => {
+interface LayoutProps{
+  children: ReactNode
+}
+const Layout = ({ children }:LayoutProps) => {
   return (
     <>
       <Titlebar />

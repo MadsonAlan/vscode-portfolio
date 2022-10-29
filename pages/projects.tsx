@@ -3,7 +3,7 @@ import ProjectCard from '../components/ProjectCard';
 import styles from '../styles/ProjectsPage.module.css';
 import { GithubRepos } from './github';
 // import puppeteer from 'puppeteer';
-interface GithubRepositoryesWithURLPage{
+export interface GithubRepositoryesWithURLPage{
   id: string,
   name: string,
   description: string,

@@ -3,6 +3,7 @@ module.exports = {
     domains: [
       'gist.github.com',
       'avatars.githubusercontent.com',
+      'raw.githubusercontent.com',
     ],
   },
 };

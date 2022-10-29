@@ -3,8 +3,13 @@ import EyeIcon from '../components/icons/EyeIcon';
 import HeartIcon from '../components/icons/HeartIcon';
 import CommentIcon from '../components/icons/CommentIcon';
 import styles from '../styles/ArticleCard.module.css';
+import { Article } from './pagesAdjust/articles';
 
-const ArticleCard = ({ article }) => {
+
+interface ArticleCardProps{
+  article: Article
+}
+const ArticleCard = ({ article }:ArticleCardProps) => {
   return (
     <a
       href={article.url}

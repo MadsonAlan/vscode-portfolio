@@ -1,6 +1,11 @@
 import styles from '../styles/ContactCode.module.css';
 
-const contactItems = [
+interface contactItems{
+  social: string,
+  link: string,
+  href: string,
+}
+const contactItems:contactItems[] = [
   {
     social: 'email',
     link: 'contato.madsonalan@gmail.com',
@@ -32,7 +37,7 @@ const ContactCode = () => {
       {contactItems.slice(0, 8).map((item, index) => (
         <p className={styles.line} key={index}>
           &nbsp;&nbsp;&nbsp;{item.social}:{' '}
-          <a href={item.href} target="_blank" rel="noopener">
+          <a href={item.href} target="_blank" rel="noreferrer noopener">
             {item.link}
           </a>
           ;
@@ -41,7 +46,7 @@ const ContactCode = () => {
       {contactItems.slice(8, contactItems.length).map((item, index) => (
         <p className={styles.line} key={index}>
           &nbsp;&nbsp;{item.social}:{' '}
-          <a href={item.href} target="_blank" rel="noopener">
+          <a href={item.href} target="_blank" rel="noreferrer noopener">
             {item.link}
           </a>
           ;

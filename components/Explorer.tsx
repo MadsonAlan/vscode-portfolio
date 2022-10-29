@@ -4,7 +4,12 @@ import { useState } from 'react';
 import ChevronRight from '../components/icons/ChevronRight';
 import styles from '../styles/Explorer.module.css';
 
-const explorerItems = [
+interface explorerItems{
+  name: string,
+  path: string,
+  icon: string
+}
+const explorerItems:explorerItems[] = [
   {
     name: 'home.jsx',
     path: '/',
@@ -33,7 +38,7 @@ const explorerItems = [
 ];
 
 const Explorer = () => {
-  const [portfolioOpen, setPortfolioOpen] = useState(true);
+  const [portfolioOpen, setPortfolioOpen] = useState<boolean>(true);
 
   return (
     <div className={styles.explorer}>

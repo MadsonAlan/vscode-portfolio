@@ -1,7 +1,20 @@
+import { GetStaticProps, NextPage } from 'next';
 import ArticleCard from '../ArticleCard';
 import styles from '../styles/ArticlesPage.module.css';
-
-const ArticlesPage = ({ articles }) => {
+export interface Article{
+  id: string
+  url: string
+  cover_image: string
+  title: string
+  description: string
+  page_views_count: number
+  public_reactions_count: number
+  comments_count: number
+}
+interface ArticlesPageProps{
+  articles: Article[]
+}
+const ArticlesPage:NextPage<ArticlesPageProps> = ({ articles }) => {
   return (
     <>
       <h3>
@@ -9,7 +22,7 @@ const ArticlesPage = ({ articles }) => {
         <a
           href="https://dev.to/itsnitinr"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer noopener"
           className={styles.underline}
         >
           dev.to
@@ -24,8 +37,8 @@ const ArticlesPage = ({ articles }) => {
   );
 };
 
-export async function getStaticProps() {
-  const res = await fetch(
+export const getStaticProps: GetStaticProps = async (context) => {
+    const res = await fetch(
     'https://dev.to/api/articles/me/published?per_page=6',
     {
       headers: {
