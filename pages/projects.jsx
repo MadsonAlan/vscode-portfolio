@@ -1,5 +1,6 @@
 import ProjectCard from '../components/ProjectCard';
 import styles from '../styles/ProjectsPage.module.css';
+// import puppeteer from 'puppeteer';
 
 const ProjectsPage = ({ projects }) => {
   return (
@@ -41,38 +42,8 @@ export async function getStaticProps() {
       }
     );
 
-    // const isDev = !process.env.AWS_REGION
     
-    // const chromeExecPaths = {
-    //   // win32: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-    //   win32: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-    //   linux: '/usr/bin/google-chrome',
-    //   // linux: '/usr/bin/chromium-browser',
-    //   darwin: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
-    // }
-
-    // const exePath = chromeExecPaths[process.platform]
-
-    // let options;
-
-
-    // if (isDev) {
-    //   options = {
-    //     args: [],
-    //     executablePath: exePath,
-    //     headless: true,
-    //     ignoreDefaultArgs: ['--disable-extensions']
-    //   }
-    // } else {
-    //   options = {
-    //     args: chrome.args,
-    //     executablePath: await chrome.executablePath,
-    //     headless: chrome.headless,
-    //     ignoreDefaultArgs: ['--disable-extensions']
-    //   }
-    // }
-    
-    // const browser = await puppeteer.launch(options)
+    // const browser = await puppeteer.launch()
     // const page = await browser.newPage();
     // await page.goto(`https://${item.homepage?.replace('https://','')}`, { waitUntil: 'networkidle2' });
     // await page.screenshot({path: `./public/${item.name}.png`})
@@ -90,8 +61,20 @@ export async function getStaticProps() {
       source_code: item.url,
       demo: `https://${item.homepage?.replace('https://','')}`
     })
+  //   getLinkPreview(`https://${item.homepage?.replace('https://','')}`, {
+  //     imagesPropertyType: "og", // fetches only open-graph images
+  //     headers: {
+  //       "user-agent": "googlebot", // fetches with googlebot crawler user agent
+  //       "Accept-Language": "fr-CA", // fetches site for French language
+  //       // ...other optional HTTP request headers
+  //     },
+  //     timeout: 1000
+  //   }).then((data) =>{
+  //   // console.debug(data)
+  //   console.log(data)
+  // }
+  // );
   }
-    
   return {
     props: { title: 'Projects', projects: reposFiltered },
     revalidate: 60*60*12,
