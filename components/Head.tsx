@@ -17,6 +17,10 @@ export function CustomHead ({ title }:CustomHeadProps){
       />
       <meta property="og:title" content="Madson Alan's Portfolio" />
       <meta
+      property="og:image"
+      content="https://portifolio-madson.vercel.app/api/og?username=myusername"
+      />
+      <meta
         property="og:description"
         content="A full-stack developer building websites that you'd like to use."
       />
