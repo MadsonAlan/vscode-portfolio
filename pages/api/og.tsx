@@ -54,7 +54,7 @@ export default async function handler(req: NextRequest) {
             marginTop: '105%',
           }}
         /> */}
-        <p>Olá 👋, venha ver meu site</p>
+        <p>Hi 👋, come see my site</p>
       </div>
     ),
     {

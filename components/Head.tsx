@@ -15,14 +15,14 @@ export function CustomHead ({ title }:CustomHeadProps){
         name="keywords"
         content="Madson Alan, madson, ranganath, web developer portfolio, madson web developer, madson developer, mern stack, Madson Alan portfolio, vscode-portfolio"
       />
-      <meta property="og:title" content="Portfolio de Madson Alan" />
+      <meta property="og:title" content="Madson Alan's Portfolio" />
       <meta
       property="og:image"
       content={`https://portfolio-madson.vercel.app/api/og?username=${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`}
       />
       <meta
         property="og:description"
-        content="A full-stack developer building websites that you like to use."
+        content="A full-stack developer building websites that you'd like to use."
       />
     </Head>
   );
