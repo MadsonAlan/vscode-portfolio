@@ -1,9 +1,16 @@
 module.exports = {
   images: {
-    domains: [
-      'gist.github.com',
-      'avatars.githubusercontent.com',
-      'raw.githubusercontent.com',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        pathname: '/gist/MadsonAlan/**',
+      },
     ],
   },
 };
