@@ -1,15 +1,16 @@
-<!-- # vscode-portfolio
+# vscode-portfolio
 [![Open is Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/itsnitinr/vscode-portfolio)
 
 A Visual Studio Code themed developer portfolio website built with Next.js and deployed on Vercel.
+Esse é um fork do projeto https://github.com/itsnitinr/vscode-portfolio (fiz quando não sabia o funcionamento do fork. Então é meio que uma cópia modificada). Melhorei ele convertendo para typescript e implementando storybook
 
-![vscode-portfolio banner](https://imgur.com/JXJ9mpO.gif)
+![vscode-portfolio banner](/public/vscode-portfolio.png)
 
 ## Features Roadmap
 
 - [ ] Themes and customizations
-  - [x] GitHub Dark (default)
-  - [ ] One Dark Pro
+  - [X] Theme alternative (default)
+  - [x] GitHub Dark 
   - [x] Dracula
   - [x] Ayu
   - [x] Nord
@@ -19,7 +20,17 @@ For other features and themes suggestions, please open an issue.
 
 ## Environment Variables
 
-For fetching your articles from dev.to, create an `.env.local` file inside the project directory. Check the `.env.local.example` file for more information.
+For fetching your articles from dev.to, create an `.env` file inside the project directory.
+
+## Running storybook
+
+```bash
+npm run storybook
+# or
+yarn storybook
+```
+Open [http://localhost:6006](http://localhost:6006) with your browser to see the result.
+- [Learn Storybook](https://storybook.js.org/docs/react/get-started/introduction) - an interactive tutorial.
 
 ## Running Development Server
 
@@ -46,4 +57,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details. -->
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Route to create your link preview image
+
+Use your github username to create a link preview image with your photo using the route below 
+
+[https://portfolio-madson.vercel.app/api/og?username=GITHUB_USERNAME](https://portfolio-madson.vercel.app/api/og?username=MadsonAlan)
+
