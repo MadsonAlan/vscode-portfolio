@@ -1,8 +1,7 @@
 # vscode-portfolio
-[![Open is Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/itsnitinr/vscode-portfolio)
 
 A Visual Studio Code themed developer portfolio website built with Next.js and deployed on Vercel.
-Esse é um fork do projeto https://github.com/itsnitinr/vscode-portfolio (fiz quando não sabia o funcionamento do fork. Então é meio que uma cópia modificada). Melhorei ele convertendo para typescript e implementando storybook
+This is a fork of the project https://github.com/itsnitinr/vscode-portfolio (I did when I didn't know how the fork works. So it's kind of a modified copy). Improved it by converting to typescript and implementing storybook
 
 ![vscode-portfolio banner](/public/vscode-portfolio.png)
 
