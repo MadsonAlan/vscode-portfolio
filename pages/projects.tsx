@@ -3,6 +3,7 @@ import { NextPage, GetStaticProps } from 'next';
 import { ProjectCard } from '../components/ProjectCard';
 import styles from '../styles/ProjectsPage.module.css';
 import { GithubRepos } from './github';
+import { getLinkPreview } from 'link-preview-js';
 // import puppeteer from 'puppeteer';
 export interface GithubRepositoryesWithURLPage{
   id: string,
@@ -10,7 +11,8 @@ export interface GithubRepositoryesWithURLPage{
   description: string,
   tags: string[],
   source_code: string,
-  demo: string
+  demo: string,
+  imageURL: string
 }
 interface ProjectsPageProps{
   projects: GithubRepositoryesWithURLPage[]
@@ -65,13 +67,25 @@ export const getStaticProps: GetStaticProps = async (context) => {
     // await browser.close();
 
     let tagsLanguages = await tagsLanguagesRes.json();
+    const imageURL = await getLinkPreview(item.html_url) as {
+      url: string;
+      title: string;
+      siteName: string | undefined;
+      description: string | undefined;
+      mediaType: string;
+      contentType: string | undefined;
+      images: string[];
+      videos: {}[];
+      favicons: string[];
+    }
     reposFiltered.push({
       id: item.id,
       name: item.name,
       description: item.description,
       tags: Object.keys(tagsLanguages),
-      source_code: item.url,
-      demo: `https://${item.homepage?.replace('https://','')}`
+      source_code: item.html_url,
+      demo: `https://${item.homepage?.replace('https://','')}`,
+      imageURL: `${imageURL.images[0]}`
     })
   //   getLinkPreview(`https://${item.homepage?.replace('https://','')}`, {
   //     imagesPropertyType: "og", // fetches only open-graph images

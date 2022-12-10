@@ -11,6 +11,11 @@ module.exports = {
         hostname: 'raw.githubusercontent.com',
         pathname: '/gist/MadsonAlan/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'opengraph.githubassets.com',
+        pathname: '/**',
+      },
     ],
   },
 };
