@@ -99,3 +99,10 @@
 .CSS:hover {
   background: rgba(86, 61, 124, 0.25);
 }
+
+.Dockerfile{
+  border: 2px solid rgb(57, 77, 84);
+}
+.Dockerfile:hover {
+  background: rgba(57, 77, 84, 0.25);
+}

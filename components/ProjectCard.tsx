@@ -7,7 +7,7 @@ interface ProjectCardProps{
 export const ProjectCard = ({ project }:ProjectCardProps) => {
   return (
     <div className={styles.card}>
-      {project.name?<Image src={project.imageURL} height={200} width={300} className={styles.imageCard} alt={project.name} />:<></>}
+      {project.name?<Image src={project.imageURL} height={200} width={400} className={styles.imageCard} alt={project.name} />:<></>}
       <div className={styles.content}>
         <h3>{project.name}</h3>
         <p>{project.description}</p>
