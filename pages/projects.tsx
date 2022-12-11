@@ -57,15 +57,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
       }
     );
 
-    
-    // const browser = await puppeteer.launch()
-    // const page = await browser.newPage();
-    // await page.goto(`https://${item.homepage?.replace('https://','')}`, { waitUntil: 'networkidle2' });
-    // await page.screenshot({path: `./public/${item.name}.png`})
-    // await page.close()
-
-    // await browser.close();
-
     let tagsLanguages = await tagsLanguagesRes.json();
     const imageURL = await getLinkPreview(item.html_url) as {
       url: string;
@@ -87,19 +78,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
       demo: `https://${item.homepage?.replace('https://','')}`,
       imageURL: `${imageURL.images[0]}`
     })
-  //   getLinkPreview(`https://${item.homepage?.replace('https://','')}`, {
-  //     imagesPropertyType: "og", // fetches only open-graph images
-  //     headers: {
-  //       "user-agent": "googlebot", // fetches with googlebot crawler user agent
-  //       "Accept-Language": "fr-CA", // fetches site for French language
-  //       // ...other optional HTTP request headers
-  //     },
-  //     timeout: 1000
-  //   }).then((data) =>{
-  //   // console.debug(data)
-  //   console.log(data)
-  // }
-  // );
   }
   return {
     props: { title: 'Projects', projects: reposFiltered },

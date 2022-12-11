@@ -9,7 +9,7 @@ const contactItems:contactItems[] = [
   {
     social: 'email',
     link: 'contato.madsonalan@gmail.com',
-    href: 'mailto:nitinranganath@gmail.com',
+    href: 'mailto:contato.madsonalan@gmail.com',
   },
   {
     social: 'github',
