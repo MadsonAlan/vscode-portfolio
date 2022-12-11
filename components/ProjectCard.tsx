@@ -13,7 +13,7 @@ export const ProjectCard = ({ project }:ProjectCardProps) => {
         <p>{project.description}</p>
         <div className={styles.tags}>
           {project.tags.map((tag) => (
-            <span key={tag} className={tag}>
+            <span key={tag} className={tag=='C++'?'CPlusPlus':tag}>
               {tag}
             </span>
           ))}

@@ -106,3 +106,68 @@
 .Dockerfile:hover {
   background: rgba(57, 77, 84, 0.25);
 }
+
+.Python{
+  border: 2px solid rgb(55, 115, 163);
+}
+
+.Python:hover{
+  background: rgba(55, 115, 163, 0.25);
+}
+
+.CMake{
+  border: 2px solid rgb(218, 52, 52);
+}
+
+.CMake:hover{
+  background: rgba(218, 52, 52, 0.25);
+}
+
+.Dart{
+  border: 2px solid rgb(20, 168, 178);
+}
+
+.Dart:hover{
+  background: rgba(20, 168, 178, 0.25);
+}
+
+.C{
+  border: 2px solid rgb(85, 85, 85);
+}
+
+.C:hover{
+  background: rgba(85, 85, 85, 0.25);
+}
+
+.Swift{
+  border: 2px solid rgb(241, 81, 57);
+}
+
+.Swift:hover{
+  background: rgba(241, 81, 57, 0.25);
+}
+
+.Kotlin{
+  border: 2px solid rgb(226, 204, 255);
+}
+
+.Kotlin:hover{
+  background: rgba(226, 204, 255, 0.25);
+}
+
+.Objective-C{
+  border: 2px solid rgb(74, 145, 246);
+}
+
+.Objective-C:hover{
+  background: rgba(74, 145, 246, 0.25);
+}
+
+.CPlusPlus{
+  border: 2px solid rgb(243, 75, 126);
+}
+
+.CPlusPlus:hover{
+  background: rgba(243, 75, 126, 0.25);
+}
+
