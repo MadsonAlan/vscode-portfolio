@@ -171,3 +171,35 @@
   background: rgba(243, 75, 126, 0.25);
 }
 
+.Java{
+  border: 2px solid rgb(175, 114, 25);
+}
+
+.Java:hover{
+  background: rgba(175, 114, 25, 0.25);
+}
+
+.Makefile{
+  border: 2px solid rgb(66, 120, 26);
+}
+
+.Makefile:hover{
+  background: rgba(66, 120, 26, 0.25);
+}
+
+.Ruby{
+  border: 2px solid rgb(111, 21, 21);
+}
+
+.Ruby:hover{
+  background: rgba(111, 21, 21, 0.25);
+}
+
+.Starlark{
+  border: 2px solid rgb(119, 210, 117);
+}
+
+.Starlark:hover{
+  background: rgba(119, 210, 117, 0.25);
+}
+

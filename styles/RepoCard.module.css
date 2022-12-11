@@ -5,7 +5,7 @@
   background: var(--article-bg);
   border-radius: 5px;
   padding: 1rem;
-}
+} 
 
 .card:hover {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
@@ -38,4 +38,23 @@
 .icon {
   color: var(--accent-color);
   margin-right: 0.3rem;
+}
+
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem 0 1rem;
+}
+
+.tags span {
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  transition: all 0.2s;
+}
+
+.imageCard {
+  border-radius: 5px;
 }

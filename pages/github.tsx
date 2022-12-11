@@ -3,7 +3,18 @@ import Image from 'next/image';
 import GitHubCalendar from 'react-github-calendar';
 import {RepoCard} from '../components/RepoCard';
 import styles from '../styles/GithubPage.module.css';
+import { getLinkPreview } from 'link-preview-js';
+import { GithubRepositoryesWithURLPage } from './projects';
 
+export interface GithubRepositoriesWithImageURLAndTechnologies extends Omit<GithubRepositoryesWithURLPage, 'demo' | 'source_code'>{
+  url:string
+  stargazers_count: number
+  homepage: string | null
+  languages_url: string
+  watchers: number
+  forks: number
+  html_url:string
+}
 interface GithubUser{
   avatar_url: string,
   login: string,
@@ -25,7 +36,7 @@ export interface GithubRepos{
 
 interface GithubPageProps {
   user: GithubUser,
-  repos: GithubRepos []
+  repos: GithubRepositoriesWithImageURLAndTechnologies []
 }
 const GithubPage:NextPage<GithubPageProps> = ({ repos, user }) => {
   const theme = {
@@ -97,9 +108,48 @@ export const getStaticProps: GetStaticProps = async (context) => {
   repos = repos
     .sort((a, b) => b.stargazers_count - a.stargazers_count)
     // .slice(0, 9);
-    
+    let reposInformation:GithubRepositoriesWithImageURLAndTechnologies[] = []
+    for (let index = 0; index < repos.length; index++) {
+      const item = repos[index];
+      let tagsLanguagesRes = await fetch(
+        item.languages_url,
+        {
+          headers: {
+            Authorization: `token ${process.env.GITHUB_API_KEY}`,
+          },
+        }
+      );
+  
+      let tagsLanguages = await tagsLanguagesRes.json();
+      const imageURL = await getLinkPreview(item.html_url) as {
+        url: string;
+        title: string;
+        siteName: string | undefined;
+        description: string | undefined;
+        mediaType: string;
+        contentType: string | undefined;
+        images: string[];
+        videos: {}[];
+        favicons: string[];
+      }
+      reposInformation.push({
+        id: item.id,
+        name: item.name,
+        description: item.description,
+        tags: Object.keys(tagsLanguages),
+        imageURL: `${imageURL.images[0]}`,
+        forks: item.forks,
+        homepage: item.homepage,
+        html_url: item.html_url,
+        languages_url: item.languages_url,
+        stargazers_count: item.stargazers_count,
+        watchers: item.watchers,
+        url: item.url
+      })
+    }
+
   return {
-    props: { title: 'GitHub', repos, user },
+    props: { title: 'GitHub', repos: reposInformation, user },
     revalidate: 60*60*12,
   };
 }

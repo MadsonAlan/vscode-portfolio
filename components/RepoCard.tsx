@@ -1,21 +1,30 @@
 
 import styles from '../styles/RepoCard.module.css';
-import { GithubRepos } from '../pages/github';
+import { GithubRepositoriesWithImageURLAndTechnologies } from '../pages/github';
 import { ForkIcon } from './icons/ForkIcon';
 import { GithubIcon } from './icons/GithubIcon';
 import { LinkIcon } from './icons/LinkIcon';
 import { StarIcon } from './icons/StarIcon';
 import { WatchIcon } from './icons/WatchIcon';
+import Image from 'next/image';
 
 interface RepoCardProps{
-  repo: GithubRepos
+  repo: GithubRepositoriesWithImageURLAndTechnologies
 }
 export const RepoCard = ({ repo }:RepoCardProps) => {
   return (
     <div className={styles.card}>
+      <Image src={repo.imageURL} height={200} width={400} className={styles.imageCard} alt={repo.name} />
       <div>
         <h3 className={styles.title}>{repo.name}</h3>
         <p>{repo.description}</p>
+        <div className={styles.tags}>
+          {repo.tags.map((tag) => (
+            <span key={tag} className={tag=='C++'?'CPlusPlus':tag}>
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
       <div className={styles.stats}>
         <div>
